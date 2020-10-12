@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 html, body {
   height: 100%;
   width: 100%;
@@ -14,6 +16,23 @@ html, body {
   height: 100%;
   box-sizing: border-box;
 }
+
+.app-title {
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: cadetblue;
+}
+
+.app-title-text {
+  font-family: 'Rock Salt', cursive;
+  font-weight: bold;
+  font-size: 35px;
+  margin-left: 75px;
+}
+
 .quill {
   height: 100%;
   box-sizing: border-box;

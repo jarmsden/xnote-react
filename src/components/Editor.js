@@ -39,17 +39,28 @@ class Editor extends Component {
     }
 
     update = debounce(() => {
-        // TODO - Debounce Function
         this.props.noteUpdate(this.state.id, {
             title: this.state.title,
             body: this.state.text
         })
     }, 1500)
 
+    updateTitle = async (txt) => {
+        await this.setState({ title: txt})
+        this.update()
+    }
+
     render() {
         const { classes } = this.props;
         return (
             <div className={classes.editorContainer}>
+                <BorderColorIcon className={classes.editIcon} />
+                <input
+                    className={classes.titleInput}
+                    placeholder='Note title...'
+                    value={this.state.title ? this.state.title : ''}
+                    onChange={(e) => this.updateTitle(e.target.value)}
+                />
                 <ReactQuill 
                     value={this.state.text}
                     onChange={this.updateBody}

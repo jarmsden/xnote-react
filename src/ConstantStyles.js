@@ -21,7 +21,7 @@ export const EDITOR_STYLE = theme => ({
     editIcon: {
       position: 'absolute',
       left: '310px',
-      top: '12px',
+      top: '75px',
       color: 'white',
       width: '10',
       height: '10'
